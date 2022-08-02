@@ -1,0 +1,18 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          url: jdbc:mysql://127.0.0.1:3306/mpa?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+          username: root
+          password: 123456
+        slave:
+          url: jdbc:mysql://127.0.0.1:3306/mpb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+          username: root
+          password: 123456
+mybatis-plus:
+  type-enums-package: com.example.mp.enums
